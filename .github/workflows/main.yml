@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - develop
-      - main
 
 # Jobs to carry out
 jobs:
@@ -33,8 +32,10 @@ jobs:
       - name: Run Lint
         run: npm run lint
 
+      # Run build
       - name: Run Build
         run: npm run build
 
+      # Run tests
       - name: Run Tests
         run: npm run test
